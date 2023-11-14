@@ -147,10 +147,30 @@ for (let i = 0; i < arrayP3.length; i++) {
     }  
 }
 */
-
+/*
 //10
-
-
+let entrada = parseInt(prompt("Ingrese su número, los pares e impares se procesan a parte, para finalizar el proceso, ingresa el número 0"))
+let pares = []
+let impares = []
+while (entrada != 0) {
+  if (entrada % 2 == 0){
+    pares.push (entrada)
+    if (pares.length == 2){
+      alert (pares[0] + pares[1])
+      pares = []
+    }
+  }else if (entrada % 2 != 0){
+    impares.push (entrada)
+    if (impares.length == 2){
+      alert (impares[0] + impares[1])
+      impares = []
+    }
+  }else if (isNaN(entrada)){
+    alert ("Se ingresaron valores inválidos")
+  }
+  entrada = parseInt(prompt("Ingrese su número, los pares e impares se procesan a parte, para finalizar el proceso, ingresa el número 0"))
+}
+*/
 /*
 //11
 let arrayP4 = [15, 2, 58, 25, 5, 6, 8, 0, 9, 102]
@@ -196,3 +216,29 @@ while (jugador1 == jugador2)
 */
 
 //14
+
+
+//15
+
+
+/*
+//16
+let arrayP5 = [15, 2, 58, 25, 5, 6, 8, 3, 9, 1]
+
+let ordenArray = []
+
+let n = 0
+
+while (ordenArray.length != arrayP5.length) {
+  for (let i = 0; i < arrayP5.length; i++) {
+    if ((arrayP5[i]) == n){
+      ordenArray.push (arrayP5[i])
+    }
+  }
+  n++
+}
+
+alert ("La lista desordenada va así: " + arrayP5)
+
+alert ("La lista ordenada va así: " + ordenArray)
+*/
