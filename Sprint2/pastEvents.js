@@ -194,10 +194,19 @@ const data = {
     },
   ],
 }
+let pastEvents = []
+let upcomingEvents = []
+for (let a = 0; a < data.events.length; a++) {
+    if (data.events[a].date > data.currentDate) {
+        pastEvents.push(data.events[a])
+    } else {
+        upcomingEvents.push(data.events[a])
+    }
+}
 
 let carrusel = document.getElementById("carouselPrincipal")
 
-for (let i = 0; i < data.events.length; i+=4) {
+for (let i = 0; i < pastEvents.length; i+=4) {
     let carruselItem 
     if (i < 4 ) {
         carruselItem = document.createElement("div")
@@ -210,17 +219,17 @@ for (let i = 0; i < data.events.length; i+=4) {
     contenedor.classList.add("d-flex","justify-content-around")
 
     for (let j = i; j < i + 4; j++) {
-        if (data.events[j] != undefined) {
+        if (pastEvents[j] != undefined) {
             let card = document.createElement("div")
             card.classList.add("card", "tamañoCartas")
             card.innerHTML = `
-            <img src="${data.events[j].image}" class="card-img-top" alt="...">
+            <img src="${pastEvents[j].image}" class="card-img-top" alt="...">
             <div class="card-body">
-                <h5 class="card-title">${data.events[j].name}</h5>
-                <p class="card-text">${data.events[j].description}</p>
+                <h5 class="card-title">${pastEvents[j].name}</h5>
+                <p class="card-text">${pastEvents[j].description}</p>
             </div>
             <div class="card-body cardEnd">
-            <p>Price: ${data.events[j].price}</p>
+            <p>Price: ${pastEvents[j].price}</p>
             <a href="/Details.html" class="button">Details</a>
             </div>`
             console.log(card);
