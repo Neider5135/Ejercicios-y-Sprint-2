@@ -214,13 +214,44 @@ do {
 }
 while (jugador1 == jugador2)
 */
-
+/*
 //14
-
-
+let salida = []
+j1 = 3
+k1 = 1
+for (let i = 0; i < 3; i++) {
+  salida = []
+  for (let j = 1; j < j1; j++) {
+    salida.push (" ")
+  }
+  
+  for (let k = 0; k < k1; k++) {
+    salida.push ("*")
+  }
+  j1--
+  k1+=2
+  console.log (salida.toString())
+}
+*/
+/*
 //15
-
-
+let salida = []
+j1 = 0
+k1 = 5
+for (let i = 0; i < 3; i++) {
+  salida = []
+  for (let j = 0; j < j1; j++) {
+    salida.push (" ")
+  }
+  
+  for (let k = 0; k < k1; k++) {
+    salida.push ("*")
+  }
+  j1++
+  k1-=2
+  console.log (salida.toString())
+}
+*/
 /*
 //16
 let arrayP5 = [15, 2, 58, 25, 5, 6, 8, 3, 9, 1]
