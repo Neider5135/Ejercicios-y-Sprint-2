@@ -214,7 +214,9 @@ for (let i = 0; i < data.events.length; i+=4) {
             let card = document.createElement("div")
             card.classList.add("card", "tamañoCartas")
             card.innerHTML = `
+            <div class="imgCardSizing">
             <img src="${data.events[j].image}" class="card-img-top" alt="...">
+            </div>
             <div class="card-body">
                 <h5 class="card-title">${data.events[j].name}</h5>
                 <p class="card-text">${data.events[j].description}</p>

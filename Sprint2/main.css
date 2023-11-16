@@ -12,6 +12,14 @@
     height: 25rem;
 }
 
+.imgCardSizing{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    height: 8rem;
+}
+
 .controlSize{
     width: 3vw;
 }

@@ -223,7 +223,9 @@ for (let i = 0; i < upcomingEvents.length; i+=4) {
             let card = document.createElement("div")
             card.classList.add("card", "tamañoCartas")
             card.innerHTML = `
+            <div class="imgCardSizing">
             <img src="${upcomingEvents[j].image}" class="card-img-top" alt="...">
+            </div>
             <div class="card-body">
                 <h5 class="card-title">${upcomingEvents[j].name}</h5>
                 <p class="card-text">${upcomingEvents[j].description}</p>
